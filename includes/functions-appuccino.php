@@ -134,6 +134,13 @@
             $post->settings       = appuccino_post_settings($post->meta_data);
             $post->template       = @$post->meta_data[$template_value][0];
 
+            if(isset($post->settings['parameters']) && is_string($post->settings['parameters'])) {
+              $post->uri = implode('/', array(
+                rtrim($post->uri, '/'),
+                ltrim($post->settings['parameters'], '/')
+              ));
+            }
+
             if($post->image_encode) {
               $post->post_content = appuccino_encode_images($post->post_content);
             }
