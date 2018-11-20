@@ -24,6 +24,12 @@ define('APPUCCINO_PLUGIN_BASE_PATH', dirname(__FILE__));
 define('APPUCCINO_IMAGE_MAX_SIZE', 1024);
 
 /**
+ * @name APPUCCINO_ENCODE_IMAGES (boolean)
+ * @info Enable image encoding site-wide.
+ */
+define('APPUCCINO_ENCODE_IMAGES', true);
+
+/**
  * @name APPUCCINO_ENCODE_MIME_TYPES (string)
  * @info The list of file types to encode base64.
  * @note Separate the file types with a vertical pipe.

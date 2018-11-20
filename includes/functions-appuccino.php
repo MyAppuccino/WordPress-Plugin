@@ -219,6 +219,10 @@
 
   function appuccino_encode_images($content, $max_file_size_kb = 1024) {
 
+    if(defined('APPUCCINO_ENCODE_IMAGES') && !APPUCCINO_ENCODE_IMAGES) {
+      return $content;
+    }
+    
     if(defined('APPUCCINO_IMAGE_MAX_SIZE')) {
       $max_file_size_kb = APPUCCINO_IMAGE_MAX_SIZE;
     }
