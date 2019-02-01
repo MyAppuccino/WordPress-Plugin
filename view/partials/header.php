@@ -44,7 +44,7 @@
     </div>
     <div class="uk-navbar-right">
 		<ul class="uk-navbar-nav">
-			<li><a href="#" uk-toggle="target: #offcanvas-push" uk-icon="menu"></a></li>
+			<li><a hrefuk-toggle="target: #offcanvas-push" uk-icon="menu"></a></li>
 		</ul>
 	</div>
 </nav>

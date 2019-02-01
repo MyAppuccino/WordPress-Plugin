@@ -134,7 +134,9 @@
             $post->settings       = appuccino_post_settings($post->meta_data);
             $post->template       = @$post->meta_data[$template_value][0];
 
-            if(isset($post->settings['parameters']) && is_string($post->settings['parameters'])) {
+            if(isset($post->settings['parameters']) 
+            && is_string($post->settings['parameters']) 
+            && !empty($post->settings['parameters'])) {
               $post->uri = implode('/', array(
                 rtrim($post->uri, '/'),
                 ltrim($post->settings['parameters'], '/')

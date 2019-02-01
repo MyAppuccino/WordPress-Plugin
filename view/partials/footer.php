@@ -22,21 +22,21 @@
 				</a>
 			</div>
 			<div>
-				<a href="#/" ng-class="post.uri == '/home/link2' ? 'active' : ''">
+				<a href="#/" ng-class="post.uri == '/home/about' ? 'active' : ''">
 					<span uk-icon="info"></span>
-					<span>Link #2</span>
+					<span>About</span>
 				</a>
 			</div>
 			<div>
-				<a href="#/" ng-class="post.uri == '/home/link3' ? 'active' : ''">
+				<a href="#/" ng-class="post.uri == '/home/events' ? 'active' : ''">
 					<span uk-icon="comment"></span>
-					<span>Link #3</span>
+					<span>Events</span>
 				</a>
 			</div>
 			<div>
-				<a href="#/" ng-class="post.uri == '/home/link4' ? 'active' : ''">
+				<a href="#/" ng-class="post.uri == '/home/events' ? 'active' : ''">
 					<span uk-icon="mail"></span>
-					<span>Link #4</span>
+					<span>Contact</span>
 				</a>
 			</div>
 		</div>
