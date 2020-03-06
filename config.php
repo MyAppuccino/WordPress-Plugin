@@ -30,6 +30,14 @@ define('APPUCCINO_IMAGE_MAX_SIZE', 1024);
 define('APPUCCINO_ENCODE_IMAGES', true);
 
 /**
+ * @name APPUCCINO_V2_CORS_HEADERS (boolean)
+ * @info Set custom CORS configuration to work with Appuccino V2 build.
+ * @note This was implemented as iOS now enforces strict CORS policies.
+ 		 Enabling this will allow both V1.x and V2 apps to work.
+ */
+define('APPUCCINO_V2_CORS_HEADERS', true);
+
+/**
  * @name APPUCCINO_ENCODE_MIME_TYPES (string)
  * @info The list of file types to encode base64.
  * @note Separate the file types with a vertical pipe.

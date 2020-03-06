@@ -408,6 +408,25 @@
 
   }
 
+  function appuccino_custom_rest_cors() {
+    if(defined('APPUCCINO_V2_CORS_HEADERS') && APPUCCINO_V2_CORS_HEADERS) {
+      
+      remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
+
+      add_filter( 'rest_pre_serve_request', function( $value ) {
+        header( 'Access-Control-Allow-Origin: *' );
+        header( 'Access-Control-Allow-Methods: GET' );
+        header( 'Access-Control-Allow-Credentials: true' );
+        header( 'Access-Control-Expose-Headers: Link', false );
+
+        return $value;
+      })
+      ;
+    }
+  }
+
+  add_action('rest_api_init', 'appuccino_custom_rest_cors', 15);
+
   add_filter( 'wp_link_query', 'appuccino_wpq_link_query', 10, 2 );
 
   add_action( 'rest_api_init', function () {
